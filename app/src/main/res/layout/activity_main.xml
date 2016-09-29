@@ -4,19 +4,137 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="id.sch.smktelkom_mlg.tugas01.xiirpl3014.pengriman_barang.MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
 
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:layout_centerVertical="true"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/imageView"
-        android:background="@drawable/logo_"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-    <TextView
-        android:layout_below="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:text="Moklet Send"
-        android:layout_height="wrap_content" />
+                android:layout_marginTop="25dp"
+                android:layout_centerVertical="true"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/imageView"
+                android:background="@drawable/logo_"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:id="@+id/text_logo"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:text="Moklet Send"
+                android:textSize="25dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/txt_name"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="40dp"
+                android:hint="Nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_logo"
+                android:layout_marginTop="40dp"/>
+
+            <EditText
+                android:id="@+id/txt_nametuj"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_name"
+                android:hint="nama tujuan"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:id="@+id/kota"
+                android:layout_marginTop="49dp"
+                android:textSize="15dp"
+                android:layout_marginLeft="40dp"
+                android:layout_below="@+id/txt_nametuj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Negara tuj : "
+                />
+            <Spinner
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="45dp"
+                android:id="@+id/spinner"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@+id/kota"
+                android:layout_below="@+id/txt_nametuj"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/country_arrays"
+
+                ></Spinner>
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/spinner"
+                android:orientation="horizontal">
+                />
+                <TextView
+                    android:textSize="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="jenis paket:"/>
+                <RadioButton
+                    android:id="@+id/rd_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="Paket YES"/>
+
+                <RadioButton
+                    android:id="@+id/rd_reguler"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reguler"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_below="@+id/radiogroup"
+                android:id="@+id/spek"
+                android:textSize="15dp"
+                android:text="Isi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:id="@+id/ck_dokumen"
+                android:layout_below="@+id/spek"
+                android:layout_marginLeft="40dp"
+                android:text="dokumen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:id="@+id/barang_lain"
+                android:layout_toRightOf="@+id/ck_dokumen"
+                android:layout_below="@+id/spek"
+                android:layout_marginLeft="40dp"
+                android:text="barang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/button"
+                android:layout_marginTop="20dp"
+                android:text="submit"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/barang_lain"/>
+        </RelativeLayout>
+    </ScrollView>
+
 </RelativeLayout>
